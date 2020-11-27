@@ -1,0 +1,48 @@
+{% extends 'facturacion/facturalia_Base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facturalia</title>
+        <meta charset="utf-8">
+    </head>  
+    <body>
+    {% block titulo %}
+    <h3>PRODUCTOS</h3>
+    {% endblock%}
+    {% block contenido %}
+    <p>Listado de Productos</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{formulario}}
+        <input type="submit" value="Consultar">
+    </form>
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>descripcion</td>
+            <td>cantidad</td>
+            <td>costo</td>
+            <td>margen</td>
+            <td>ubicacion</td>
+            <td>Proveedor</td>
+        </tr>
+        
+        {% for renglon in lista %}
+        <tr>
+            <td>{{renglon.nombre}}</td>
+            <td>{{renglon.descripcion}}</td>
+            <td>{{renglon.cantidad}}</td>
+            <td>{{renglon.costo}}</td>
+            <td>{{renglon.margen}}</td>
+            <td>{{renglon.ubicacion}}</td>
+            <td>{{renglon.empresa}}</td>
+
+
+        </tr>
+        {% endfor %}
+    </table>
+    {% endblock%}
+    
+    </body>
+
+</html>
