@@ -18,17 +18,17 @@
     </form>
     <table>
         <tr>
-            <td>Nombre</td>
-            <td>descripcion</td>
-            <td>cantidad</td>
-            <td>costo</td>
-            <td>margen</td>
-            <td>ubicacion</td>
-            <td>Proveedor</td>
+            <th>Nombre</th>
+            <th>descripcion</th>
+            <th>cantidad</th>
+            <th>costo</th>
+            <th>margen</th>
+            <th>ubicacion</th>
+            <th>Proveedor</th>
         </tr>
         
         {% for renglon in lista %}
-        <tr>
+        <tr class="listado">
             <td>{{renglon.nombre}}</td>
             <td>{{renglon.descripcion}}</td>
             <td>{{renglon.cantidad}}</td>

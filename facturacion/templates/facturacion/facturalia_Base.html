@@ -5,6 +5,10 @@
         <title>Facturalia</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{% static "css/estilos.css" %}">
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Last-Modified" content="0">
+        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+        <meta http-equiv="Pragma" content="no-cache">
     </head>
     <body>
         <header>
@@ -22,13 +26,14 @@
             <nav id='menu01'>
                 <ul>
                     <li><a href="..">Inicio</a></li>
+                    <li><a href="../empresas">Empresas</a></li>
                     <li><a href="../contactos">Contactos</a></li>
                     <li><a href="../productos">Productos</a></li>
                     
                 </ul>
             </nav>
 
-            <nav class = 'mostrar'>
+            <nav>
                 {% block contenido %}
                 {% endblock%}
             </nav>

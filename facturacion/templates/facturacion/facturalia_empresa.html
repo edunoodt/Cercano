@@ -7,10 +7,10 @@
     </head>  
     <body>
     {% block titulo %}
-    <h3>CONTACTOS</h3>
+    <h3>Empresas</h3>
     {% endblock%}
     {% block contenido %}
-    <p>Listado de contactos</p>
+    <p>Listado de Productos</p>
     <form action="" method="POST">
         {% csrf_token %}
         {{formulario}}
@@ -18,16 +18,23 @@
     </form>
     <table>
         <tr>
-            <th>Apellido</th>
             <th>Nombre</th>
-            <th>Empresa</th>
+            <th>Razon Social</th>
+            <th>cuit</th>
+            <th>Cond.Afip</th>
+            <th>Prov/Cliente</th>
+            <th>Bonificación</th>
         </tr>
         
         {% for renglon in lista %}
-        <tr>
-            <td>{{renglon.apellido}}</td>
+        <tr class="listado">
             <td>{{renglon.nombre}}</td>
-            <td>{{renglon.empresa}}</td>
+            <td>{{renglon.razon_social}}</td>
+            <td>{{renglon.cuit}}</td>
+            <td>{{renglon.cond_afip}}</td>
+            <td>{{renglon.tipo}}</td>
+            <td>{{renglon.bonificacion}}</td>
+
 
         </tr>
         {% endfor %}
